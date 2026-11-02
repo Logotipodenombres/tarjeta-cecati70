@@ -87,3 +87,28 @@ for(const row of el("canales").children){
 }
 
 
+const instalar = el("instalar");
+const appWindow = matchMedia("(display-mode: standalone)");
+instalar.hidden = appWindow.matches || navigator.standalone === true;
+let solicitudInstalacion;
+window.addEventListener("beforeinstallprompt", event => {
+  event.preventDefault();
+  solicitudInstalacion = event;
+});
+window.addEventListener("appinstalled", () => {
+  instalar.hidden = true;
+  solicitudInstalacion = null;
+  estado("Tarjeta instalada.");
+});
+instalar.onclick = async () => {
+  if (solicitudInstalacion) {
+    const solicitud = solicitudInstalacion;
+    solicitudInstalacion = null;
+    await solicitud.prompt();
+    return;
+  }
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  estado(ios ? "En Safari, toca Compartir y luego Agregar a inicio." :
+    "En Chrome, abre el menú ⋮ y selecciona Agregar a la pantalla principal o Instalar aplicación.");
+};

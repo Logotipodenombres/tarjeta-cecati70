@@ -1,0 +1,6 @@
+{
+  "id":"./", "start_url":"./", "scope":"./", "display":"standalone",
+  "name":"Néstor Guillén Rodríguez", "short_name":"Néstor Guillén",
+  "lang":"es-MX", "theme_color":"#691033", "background_color":"#ffffff",
+  "icons":[{"src":"img/nestor-192.png","sizes":"192x192","type":"image/png"},{"src":"img/nestor-512.png","sizes":"512x512","type":"image/png"}]
+}

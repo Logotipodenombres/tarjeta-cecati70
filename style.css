@@ -31,3 +31,4 @@ footer{border-top:1px solid #ddd4c3;padding-block:14px;color:#4f5357}.foot{margi
 .portrait{min-height:260px}.identity h1{font-weight:400;line-height:1.04;font-size:clamp(26px,5.7vw,44px)}#dgcft{overflow:visible;width:50px}#dgcft img{width:65px;height:65px}header{min-height:80px}
 @media(max-width:420px){.portrait{min-height:232px}.identity{padding:15px 12px}.identity #personal{width:39px}.identity .tag{letter-spacing:.08em}}
 #linkedin{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;border-radius:8px;background:#075a9e;color:white;font:650 15px system-ui;min-height:48px}#linkedin b{background:white;color:#075a9e;border-radius:2px;padding:0 3px}
+#instalar{display:block;width:100%;margin-top:10px;padding:12px;border-radius:8px;border:1px solid #ccb992;background:#faf8f4;color:#473a27;font-weight:650}#instalar[hidden]{display:none}
